@@ -12,5 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/login', function(){
+	return view('auth.login');
+});
+
+Route::get('/logout', function(){
+	return "<h1>User Logout</h1>";
+});
+
+Route::get('/catalog', function(){
+	return view('catalog.index');
+});
+
+Route::get('/catalog/show/{id}', function($id){
+	return view('catalog.show')->with('id', $id);
+});
+
+Route::get('/catalog/create', function(){
+	return view('catalog.create');
+});
+
+Route::get('/catalog/edit/{id}', function($id){
+	return view('catalog.edit')->with('id', $id);
 });
