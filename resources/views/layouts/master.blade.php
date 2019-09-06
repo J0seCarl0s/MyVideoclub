@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ url('/assets/bootstrap/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}">
 
     <title>My Videoclub</title>
   </head>
@@ -19,6 +19,17 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src={{ url('/assets/bootstrap/js/bootstrap.min.js') }} integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="{{ url('/assets/jquery/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url('/assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript">
+      $(".year-only").datepicker({
+          format: "yyyy",
+          startView: 'decade',
+          minView: 'decade',
+          viewSelect: 'decade',
+          autoclose: true,
+      });
+    </script>
   </body>
 </html>
